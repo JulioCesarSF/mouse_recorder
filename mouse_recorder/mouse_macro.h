@@ -293,6 +293,7 @@ static void load_current_step_from_file()
 	}
 
 	fclose(p_file);
+	free(p_buffer);
 	is_handling_file = false;
 	std::cout << "Steps loaded from file: " << inputs.size() << std::endl;
 	std::cout << ">! Reading file:\t" << "SUCCESS" << std::endl;
