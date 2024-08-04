@@ -69,6 +69,8 @@ BOOL WINAPI HandlerRoutine(_In_ DWORD dwCtrlType)
 		if (UnhookWindowsHookEx(p_hook) == TRUE)
 			p_hook = nullptr;
 
+		play_current_macro = false;
+		start_record = false;
 		reset_inputs();
 		reset_input_id();
 		unregister_hot_keys();
